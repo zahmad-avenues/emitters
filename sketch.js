@@ -3,7 +3,7 @@ let G
 
 function setup() {
   createCanvas(400, 600);
-
+  frameRate(30)
   emitters.push( new Emitter( width/2, 30 ) )
   //change wind direction for particles
   G = createVector(0.25,0.5)

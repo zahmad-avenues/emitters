@@ -4,14 +4,14 @@ class Particle {
     this.velocity = p5.Vector.random2D()
     this.acceleration = p5.Vector.random2D()
     this.r = 10
-    this.lifespan = 255
+    this.lifespan = 1
   }
   
   update() {
     this.velocity.add(this.acceleration)
     this.position.add(this.velocity)   
     this.acceleration.mult(0)
-    this.lifespan -= 2
+    this.lifespan -= 0.01
   }
   
   isDead() {
@@ -24,8 +24,8 @@ class Particle {
   
   draw() {
     let blueVal = Math.floor(Math.random()*255)
-    let rgbaString 
-    fill(5, this.lifespan)
+    let rgbaString = `rgba(0,0,${blueVal},${this.lifespan})`
+    fill(rgbaString)
     circle(this.position.x,this.position.y,this.r)
   }
   
