@@ -23,6 +23,8 @@ class Particle {
   }
   
   draw() {
+    let blueVal = Math.floor(Math.random()*255)
+    let rgbaString 
     fill(5, this.lifespan)
     circle(this.position.x,this.position.y,this.r)
   }
