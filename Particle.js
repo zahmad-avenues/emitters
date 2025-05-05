@@ -23,7 +23,7 @@ class Particle {
   }
   
   draw() {
-    fill(255, this.lifespan)
+    fill(5, this.lifespan)
     circle(this.position.x,this.position.y,this.r)
   }
   

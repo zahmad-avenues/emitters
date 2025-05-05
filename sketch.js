@@ -5,8 +5,8 @@ function setup() {
   createCanvas(400, 600);
 
   emitters.push( new Emitter( width/2, 30 ) )
-  
-  G = createVector(0,0.1)
+  //change wind direction for particles
+  G = createVector(0.25,0.5)
   ellipseMode(RADIUS)
   noStroke()
 }
