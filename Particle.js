@@ -41,3 +41,44 @@ class Particle {
     )
   }
 }
+class SquareParticle extends Particle {
+  constructor(x,y) {
+    super(x,y)
+    
+  }
+  draw() {
+    let blueVal = Math.floor(Math.random()*255)
+    let rgbaString = `rgba(0,0,${blueVal},${this.lifespan})`
+    fill(rgbaString)
+    square(this.position.x,this.position.y,this.r)
+  }
+  static createSquareParticleAt(x,y) {
+    return new SquareParticle(
+      x,y
+    )
+  }
+}
+class RandomSizeParticle extends Particle {
+  constructor(x,y) {
+    super(x,y)
+    this.r = Math.random()*15
+    
+  }
+  static createRandomSizeParticleAt(x,y) {
+    return new RandomSizeParticle(
+      x,y
+    )
+  }
+}
+class RandomSquareParticle extends SquareParticle {
+  constructor(x,y) {
+  super(x,y)
+    this.r = Math.random()*15
+    
+  }
+  static createRandomSquareParticleAt(x,y) {
+    return new RandomSquareParticle(
+      x,y
+    )
+  }
+}

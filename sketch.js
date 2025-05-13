@@ -24,7 +24,10 @@ class Emitter {
     this.y = y
     this.particles = []
     for( let i = 0; i < 20; i++ ) {
-      this.particles.push( new Particle(this.x, this.y) )
+    //  this.particles.push( new SquareParticle(this.x, this.y) )//
+  //    this.particles.push( new Particle(this.x, this.y) )//
+//      this.particles.push( new RandomSizeParticle(this.x, this.y) )//
+      this.particles.push( new RandomSquareParticle(this.x, this.y) )
     }    
   }
   
@@ -39,7 +42,10 @@ class Emitter {
     }
 
     // add new ones
-    this.particles.push( new Particle(this.x, this.y) )     
+    //this.particles.push( new SquareParticle(this.x, this.y) )  // 
+ //   this.particles.push( new Particle(this.x, this.y) )//    
+//    this.particles.push( newRandomSizeParticle(this.x, this.y) )   //
+    this.particles.push( new RandomSquareParticle(this.x, this.y) )   
   }
 }
 
